@@ -1,0 +1,25 @@
+def shot_data():
+    shots = [
+        {"hole": 1, "club": "Driver", "starting_yardage": 390, "current_lie": "Tee", "ending_yardage": 105, "miss_direction": "Left", "penalty": False},
+        {"hole": 1, "club": "Pitching Wedge", "starting_yardage": 105, "current_lie": "Rough", "ending_yardage": 11, "miss_direction": "Right", "penalty": False},
+        {"hole": 1, "club": "Putter", "starting_yardage": 11, "current_lie": "Green", "ending_yardage": 0.8, "miss_direction": "Right", "penalty": False},
+        {"hole": 1, "club": "Putter", "starting_yardage": 0.8, "current_lie": "Green", "ending_yardage": 0, "miss_direction": "In", "penalty": False},
+        {"hole": 2, "club": "7 Iron", "starting_yardage": 160, "current_lie": "Tee", "ending_yardage": 30, "miss_direction": "Straight", "penalty": False},
+        {"hole": 2, "club": "Pitching Wedge", "starting_yardage": 30, "current_lie": "Fairway", "ending_yardage": 12, "miss_direction": "Left", "penalty": False},
+        {"hole": 2, "club": "Putter", "starting_yardage": 12, "current_lie": "Green", "ending_yardage": 2, "miss_direction": "Straight", "penalty": False},
+        {"hole": 2, "club": "Putter", "starting_yardage": 2, "current_lie": "Hole", "ending_yardage": 0, "miss_direction": "In", "penalty": False},
+        {"hole": 3, "club": "Driver", "starting_yardage": 520, "current_lie": "Tee", "ending_yardage": 300, "miss_direction": "Straight", "penalty": False},
+        {"hole": 3, "club": "5 Wood", "starting_yardage": 300, "current_lie": "Fairway", "ending_yardage": 100, "miss_direction": "Left", "penalty": False},
+        {"hole": 3, "club": "Pitching Wedge", "starting_yardage": 100, "current_lie": "Rough", "ending_yardage": 30, "miss_direction": "Straight", "penalty": False},
+        {"hole": 3, "club": "Pitching Wedge", "starting_yardage": 30, "current_lie": "Fairway", "ending_yardage": 10, "miss_direction": "Straight", "penalty": False},
+        {"hole": 3, "club": "Putter", "starting_yardage": 30, "current_lie": "Green", "ending_yardage": 0, "miss_direction": "In", "penalty": False},
+        {"hole": 4, "club": "7 Iron", "starting_yardage": 198, "current_lie": "Tee", "ending_yardage": 15, "miss_direction": "Straight", "penalty": False},
+        {"hole": 4, "club": "Putter", "starting_yardage": 15, "current_lie": "Green", "ending_yardage": 1, "miss_direction": "Straight", "penalty": False},
+        {"hole": 4, "club": "Putter", "starting_yardage": 1, "current_lie": "Green", "ending_yardage": 0, "miss_direction": "In", "penalty": False},
+        {"hole": 5, "club": "Driver", "starting_yardage": 316, "current_lie": "Tee", "ending_yardage": 200, "miss_direction": "Right", "penalty": True},
+        {"hole": 5, "club": "7 Iron", "starting_yardage": 200, "current_lie": "Rough", "ending_yardage": 122, "miss_direction": "Left", "penalty": False},
+        {"hole": 5, "club": "Pitching Wedge", "starting_yardage": 122, "current_lie": "Fairway", "ending_yardage": 10, "miss_direction": "Left", "penalty": False},
+        {"hole": 5, "club": "Putter", "starting_yardage": 10, "current_lie": "Green", "ending_yardage": 2, "miss_direction": "Right", "penalty": False},
+        {"hole": 5, "club": "Putter", "starting_yardage": 2, "current_lie": "Green", "ending_yardage": 0, "miss_direction": "In", "penalty": False}
+    ]
+    return shots
