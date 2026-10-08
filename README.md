@@ -2,9 +2,11 @@
 
 Hello, there!
 
-If you are on this page, you have found my project "clubLens". The intent of this project is to apply my knowledge of programming toward a product that is intended to help with a real problem many people have: where their golf swing is going wrong!
+If you are on this page, you have found my product "clubLens". The intent of this product is to apply my knowledge of programming toward a something that is intended to help with a real problem many people have: where their golf swing is going wrong!
 
-"clubLens" is intended to become a website and then eventually a mobile app one day. To progress this project, here is the tech stack I have been using: Python, SQL (specifically SQLite), HTML, and CSS.
+"clubLens" is intended to become a website and then eventually a mobile app one day. To progress this product, here is the tech stack I have been using: Python, SQL (specifically SQLite), HTML, and CSS.
+
+By using this chosen tech stack, my intent is to use technology to create an algorithm that advises golfers on how to improve their golf shots. At first, the golfer will have to input their data into the program, and then it will eventually advance into a more functional product.
 
 Below is some documentation I have been making along the way. Enjoy!
 
