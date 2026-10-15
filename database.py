@@ -97,3 +97,25 @@ def get_shots(round_id):
     shots = cursor.fetchall()
     connection.close()
     return shots
+
+def get_all_shots():
+    connection = sqlite3.connect("clublens.db")
+    connection.row_factory = sqlite3.Row
+    cursor = connection.cursor()
+    cursor.execute(
+        "SELECT * FROM shots"
+    )
+    shots = cursor.fetchall()
+    connection.close()
+    return shots
+
+def clear_test_data():
+    connection = sqlite3.connect("clublens.db")
+    connection.execute("PRAGMA foreign_keys = ON")
+    cursor = connection.cursor()
+
+    cursor.execute("DELETE FROM shots")
+    cursor.execute("DELETE FROM rounds")
+
+    connection.commit()
+    connection.close()
