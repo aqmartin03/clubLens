@@ -1,4 +1,5 @@
 import sqlite3
+import os
 
 def create_tables():
     connection = sqlite3.connect("clublens.db")
@@ -99,6 +100,8 @@ def get_shots(round_id):
     return shots
 
 def get_all_shots():
+    print("Working directory:", os.getcwd())
+    print("Database path:", os.path.abspath("clublens.db"))
     connection = sqlite3.connect("clublens.db")
     connection.row_factory = sqlite3.Row
     cursor = connection.cursor()

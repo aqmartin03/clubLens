@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubLens - Add Round</title>
+    <link href="{{ url_for('static', filename='style/styles.css') }}" rel="stylesheet">
+    <script defer rel="index.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="{{ url_for('static', filename='images/golf2.png') }}"
+                alt="ClubLens Logo"
+                class="logo">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('add_round_page') }}">Add Round</a>
+            <a href="{{ url_for('club_analysis') }}">Club Analysis</a>
+        </nav>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        ClubLens &copy 2026
+    </footer>
+</body>
+</html>

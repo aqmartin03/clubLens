@@ -1,0 +1,119 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #F7F5EF;
+    color: #1F2925;
+}
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navbar {
+    background-color: #143D30;
+    padding: 10px 20px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+nav a {
+    text-decoration: none;
+    color: #F7F5EF;
+    font-size: 20px;
+    justify-content: right;
+}
+nav a:hover {
+    color: #B8D7BE;
+}
+.logo {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+h1, #welcome {
+    text-align: center;
+}
+.buttons_index {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+.button_index1 a {
+    background-color: #143D30;
+    color: white;
+    padding: 12px 24px;
+    border: 2px solid #143D30;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button_index1 a:hover {
+    background-color: #326B4B;
+}
+.button_index2 a {
+    background-color: transparent;
+    color: #143D30;
+    padding: 12px 24px;
+    border: 2px solid #143D30;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button_index2 a:hover {
+    background-color: #E3EAE2;
+}
+.button_index1 a,
+.button_index2 a {
+    display: inline-block;
+    text-decoration: none;
+}
+footer {
+    text-align: center;
+    background-color: #143D30;
+    color: white;
+    padding: 15px;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 10px;
+    }
+    .navbar a {
+        font-size: 16px;
+    }
+    .logo {
+        width: 50px;
+    }
+    .buttons_index {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    main {
+        padding: 20px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    #welcome h2 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+    .button_index1 a,
+    .button_index2 a {
+        width: 180px;
+        box-sizing: border-box;
+        text-align: center
+    }
+}

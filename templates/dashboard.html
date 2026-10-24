@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubLens - Dashboard</title>
+    <link href="{{ url_for('static', filename='style/styles.css') }}" rel="stylesheet">
+    <script defer rel="index.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="{{ url_for('static', filename='images/golf2.png') }}"
+                alt="ClubLens Logo"
+                class="logo">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('add_round_page') }}">Add Round</a>
+            <a href="{{ url_for('club_analysis') }}">Club Analysis</a>
+        </nav>
+    </header>
+    <main>
+        <!-- This is where the recommendation will go -->
+        {% if recommendation %}
+            <h2>Practice Priority: {{ recommendation.club }}</h2>
+            <p>
+                Major Miss Rate:
+                {{ "%.2f"|format(recommendation.major_miss_rate) }}%
+            </p>
+            <p>
+                Most Common Miss Direction: {{ recommendation.miss_direction }}
+            </p>
+        {% else %}
+            <p>No practice recommendation available yet.</p>
+        {% endif %}
+        <p>Total Shots Recorded: {{ total_shots }}</p>
+        <p>Total Rounds: {{ total_rounds }}</p>
+        <p>Clubs Used: {{ total_clubs }}</p>
+    </main>
+    <footer>
+        ClubLens &copy 2026
+    </footer>
+</body>
+</html>

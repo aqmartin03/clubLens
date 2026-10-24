@@ -84,23 +84,34 @@ def performance_summary(shots):
     """
     Summarize the performance of the player's shot data, sorted by club.
     """
+    club_stats = {}
+
     counts = count_clubs_used(shots)
     misses = count_miss_directions(shots)
     major_misses = count_major_misses(shots)
     penalties = count_penalties(shots)
     for club in counts:
+        club_stats[club] = {}
+        club_stats[club]["shots"] = counts[club]
+        club_stats[club]["major_misses"] = major_misses.get(club, 0)
+        club_stats[club]["penalties"] = penalties.get(club, 0)
+        club_stats[club]["Left"] = misses[club].get("Left", 0)
+        club_stats[club]["Right"] = misses[club].get("Right", 0)
+        club_stats[club]["Straight"] = misses[club].get("Straight", 0)
         # Prints the club
-        print()
-        print(club)
-        print("-----------------")
-        print(f"Shots: {counts[club]}")
-        print(f"Left: {misses[club].get("Left", 0)}")
-        print(f"Right: {misses[club].get("Right", 0)}")
-        print(f"Straight: {misses[club].get("Straight", 0)}")
-        print(f"Moderate/Severe Misses: {major_misses.get(club, 0)}")
-        print(f"Penalties: {penalties.get(club, 0)}")
+        # print()
+        # print(club)
+        # print("-----------------")
+        # print(f"Shots: {counts[club]}")
+        # print(f"Left: {misses[club].get("Left", 0)}")
+        # print(f"Right: {misses[club].get("Right", 0)}")
+        # print(f"Straight: {misses[club].get("Straight", 0)}")
+        # print(f"Moderate/Severe Misses: {major_misses.get(club, 0)}")
+        # print(f"Penalties: {penalties.get(club, 0)}")
         major_miss_rate = (major_misses.get(club, 0) / counts[club]) * 100
-        print(f"Major Miss Rate: {major_miss_rate:.2f}%")
+        # print(f"Major Miss Rate: {major_miss_rate:.2f}%")
+        club_stats[club]["major_miss_rate"] = major_miss_rate
+    return club_stats
 
 def practice_recommendation(shots):
     club_counts = {}
@@ -133,9 +144,9 @@ def practice_recommendation(shots):
                 highest_miss_rate = major_miss_rate
                 worst_club = club
 
-            print(f"{club}: {major_miss_rate:.2f}%")
-        else:
-            print(f"{club}: not enough data")
+        #     print(f"{club}: {major_miss_rate:.2f}%")
+        # else:
+        #     print(f"{club}: not enough data")
 
     if worst_club is not None:
         club_directions = misses[worst_club]
@@ -149,8 +160,14 @@ def practice_recommendation(shots):
         else:
             tendency = "No dominant direction"
     if worst_club is None:
-        print("No practice priority identified from the available data.")
+        # print("No practice priority identified from the available data.")
+        return None
     else:
-        print(f"Practice priority: {worst_club}")
-        print(f"Major miss rate {highest_miss_rate:.2f}")
-        print(f"Most common miss direction: {tendency}")
+        return {
+            "club": worst_club,
+            "major_miss_rate": highest_miss_rate,
+            "miss_direction": tendency
+        }
+        # print(f"Practice priority: {worst_club}")
+        # print(f"Major miss rate {highest_miss_rate:.2f}")
+        # print(f"Most common miss direction: {tendency}")
